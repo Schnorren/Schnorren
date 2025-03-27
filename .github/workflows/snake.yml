@@ -1,8 +1,8 @@
-name: Generate Snake Contribution Grid
+name: Generate Cyberpunk Snake Contribution Grid
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Every day at midnight
+    - cron: "0 0 * * *"  # runs daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -12,23 +12,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Snake SVG
-        uses: Platane/snk@v3
+      - name: Generate Snake SVG - Cyberpunk Style
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: lucasramon
           outputs: |
             dist/github-contribution-grid-snake.svg
+          snake_color: '#39ff14'                # green neon
+          background_color: '#000000'           # black terminal
+          grid_color: '#303030'                 # dark gray
+          color_snake: '#39ff14'
+          color_dots: '#003300,#006600,#009900,#00cc00,#00ff00' # terminal-like green levels
 
-      - name: Push to output branch
+      - name: Push SVG to output branch
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git fetch origin output
           git switch output || git checkout -b output
-          mkdir -p dist
           cp dist/github-contribution-grid-snake.svg .
           git add github-contribution-grid-snake.svg
-          git commit -m "update snake svg" || echo "No changes to commit"
+          git commit -m "update cyberpunk snake svg" || echo "No changes"
           git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
