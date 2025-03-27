@@ -2,7 +2,7 @@ name: Generate Matrix Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # daily
   workflow_dispatch:
 
 jobs:
@@ -12,17 +12,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Snake Matrix Style
-        uses: Platane/snk/svg-only@v3
+      - name: Generate Snake SVG (Matrix Style)
+        uses: Platane/snk/svg-only@v3  # <- essa versão aceita customização
         with:
           github_user_name: lucasramon
           outputs: |
             dist/github-contribution-grid-snake.svg
-          snake_color: '#39ff14'                # matrix green snake
-          background_color: '#000000'           # total black background
-          grid_color: '#111111'                 # very dark dots
-          color_snake: '#39ff14'
-          color_dots: '#0f0,#0c0,#090,#060,#030' # matrix green levels
+          snake_color: '#39ff14'
+          background_color: '#000000'
+          grid_color: '#111111'
+          color_dots: '#0f0,#0c0,#090,#060,#030'
 
       - name: Push SVG to output branch
         run: |
