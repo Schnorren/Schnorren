@@ -41,7 +41,7 @@
 ## 🐍 Contribution Snake Game
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucasramon/lucasramon/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  <img src="https://lucasramon.github.io/lucasramon/github-contribution-grid-snake.svg" alt="snake animation" />
 </p>
 
 ---
