@@ -5,7 +5,7 @@
 🎓 Software Engineering student at PUCRS (Brazil)  
 📊 Passionate about Data Analysis, Backend Development, and Systems Security  
 🚀 Exploring AI, Blockchain, and Software Architecture  
-✍️ I write weekly articles on [Medium](https://medium.com/@schnorren)  
+✍️ I write weekly articles on [Medium](https://medium.com/@lucas.ramon)  
 📈 Always learning, building, and sharing knowledge!
 
 ---
@@ -58,7 +58,7 @@
 ## 📫 Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucasramon/)
-[![Medium](https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@schnorren)
+[![Medium](https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@lucas.ramon)
 
 ---
 
